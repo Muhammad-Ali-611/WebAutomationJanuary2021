@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testing.org/testng-1.0.dtd">
+
+<suite name = "Amazon test Script" parallel ="false">
+    <parameter name="url" value = "https://www.amazon.com/"></parameter>
+
+<test name = "Amazon.com">
+
+<classes>
+    <class name="base.CommonAPI"/>
+
+</classes>
+</suite>
