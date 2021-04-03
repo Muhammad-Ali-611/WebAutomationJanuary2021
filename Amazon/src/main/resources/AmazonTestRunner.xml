@@ -7,6 +7,7 @@
 <test name = "Amazon.com">
 
 <classes>
+    <class name="landingpage.DropDownManu"></class>
     <class name="landingpage.PageTile"></class>
     <class name="landingpage.Search"></class>
 
