@@ -73,6 +73,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\NYPOST\src\main\java\DataSource\ConectSqlDB.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\NYPOST\src\main\java\PAGES\LandingPage.java">
           <value>
             <Attribute>
@@ -95,6 +102,20 @@
           </value>
         </entry>
         <entry key="\NYPOST\src\test\java\homepage\SearchPage.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\NYPOST\src\test\java\homepage\SectionArtiicleNews.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\NYPOST\src\test\java\homepage\TestAllFunctionality.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />

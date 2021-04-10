@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Amazon/Amazon.iml" filepath="$PROJECT_DIR$/Amazon/Amazon.iml" />
       <module fileurl="file://$PROJECT_DIR$/Genarate/Genarate.iml" filepath="$PROJECT_DIR$/Genarate/Genarate.iml" />
       <module fileurl="file://$PROJECT_DIR$/NYPOST/NYPOST.iml" filepath="$PROJECT_DIR$/NYPOST/NYPOST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/W3Schools/W3Schools.iml" filepath="$PROJECT_DIR$/W3Schools/W3Schools.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/WebAutomationJanuary2021.iml" filepath="$PROJECT_DIR$/.idea/WebAutomationJanuary2021.iml" />
     </modules>
   </component>

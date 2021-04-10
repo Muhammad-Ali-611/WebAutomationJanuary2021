@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testing.org/testng-1.0.dtd">
+
+<suite name = "W3Schools" parallel ="false">
+    <parameter name="use CloudEnv" value=""></parameter>
+    <parameter name="url" value = "https://www.w3schools.com/sql_select.asp"></parameter>
+     <parameter name="os" value=""></parameter>
+<test name="">name = "W3Schools"
+    <classes>
+        <class name = ""></class>
+    </classes>
+</test>
+
+</suite>

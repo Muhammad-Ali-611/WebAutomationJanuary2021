@@ -4,10 +4,7 @@
 <suite name = "Amazon test Script" parallel ="false">
     <parameter name="url" value = "https://www.amazon.com/"></parameter>
 
-<test name = "Amazon.com">
+<test name="">name = "Amazon.com"</test>
 
-<classes>
-    <class name="base.CommonAPI"/>
-
-</classes>
+<classes><class name="base.CommonAPI"/></classes>
 </suite>

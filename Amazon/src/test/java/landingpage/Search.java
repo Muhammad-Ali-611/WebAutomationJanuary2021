@@ -1,9 +1,6 @@
 package landingpage;
 
 import base.CommonAPI;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.SearchContext;
 import org.testng.annotations.Test;
 import searchpage.SearchPage;
 
@@ -16,7 +13,6 @@ public class Search extends CommonAPI {
         for (String item:itemList) {
             typeONCss("#twotabsearchtextbox", "laptop");
             Thread.sleep(2000);
-            clearInputField("#twotabsearchtextbox");
-        }
+            clearInputField("#twotabsearchtextbox");        }
     }
 }

@@ -19,6 +19,7 @@ public class SearchPage {
     }
 
     public Object goToBusinessPage(WebDriver driver) {
+        return goToBusinessPage(driver);
     }
 }
 

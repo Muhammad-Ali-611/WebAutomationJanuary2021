@@ -22,11 +22,16 @@ public class BusinessPage {
         public WebElement getHeadNewsWebElement(){
             return headLineNewsWebElements;
 
-        public String getHeadLIneNews(){
-            return getHeadNewsWebElement().getText()
+
 
 
             }
+
+    public String getHeadLIneNews() {
+            return getHeadLIneNews();
     }
+
+    public void clickOnHeadLineNews() {
     }
+}
 
