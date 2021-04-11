@@ -9,16 +9,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class CommonAPI {
     public WebDriver driver = null;
-    public String browserStackUserName;
-    private Object WebElement;
+    public String browserStackUserName = "Muhammad Ali";
+    public String browserStackAccessKey = "StrCXDyLU9h2gRPppqKU";
+    public String sauceLabUserName = "";
+    public String sauceLabAccessKey = "";
 
     public static void navigateBack() {
     }
@@ -63,18 +69,18 @@ public class CommonAPI {
 
     public WebDriver getLocalDriver(String browserName, Object name){
         if (browserName.equalsIgnoreCase("chrome")){
-         if (OS.equalIgnoreCase("OS X")){
+         if (OS.isVersion("OS X")){
              System.setProperty("Webdriver.chrome.driver","Generic/driver/chromedriver");
              driver = new ChromeDriver();
-         }else if (OS.equalIgnoreCase("Windows")){
+         }else if (OS.isVersion("Windows")){
              System.setProperty("Webdriver.chrome.driver","Generic/driver/chromedriver exe");
              driver = new ChromeDriver();
          }
         }else if (browserName.equalsIgnoreCase("Firefox")){
-            if (OS.equalIgnoreCase("OS X")){
+            if (OS.isVersion("OS X")){
                 System.setProperty("Webdriver.chrome.driver","Generic/driver/geckodriver");
                 driver = new FirefoxDriver();
-            }else if (OS.equalIgnoreCase("Windows")){
+            }else if (OS.isVersion("Windows")){
                 System.setProperty("Webdriver.gecko.driver","Generic/driver/geckodriver.exe");
                 driver = new FirefoxDriver();
             }
@@ -86,6 +92,19 @@ public class CommonAPI {
             driver = new SafariDriver();
         }
         return driver;
+    }
+    public WebDriver getCloudDriver(String envName, String OS,String os_version, String browserName, String browserVersion)throws MalformedURLException{
+        DesiredCapabilities cap = new DesiredCapabilities();
+        cap.setCapability("browser",browserName);
+        cap.setCapability("browserVersion",browserVersion);
+        cap.setCapability("OS",OS);
+        if (envName.equalsIgnoreCase("BrowseStack")){
+            driver = new RemoteWebDriver(new URL("http://"+browserStackUserName+":"+browserStackAccessKey+"@hub-cloud.browserStack.com/wd/hub"),cap);
+            driver = new RemoteWebDriver(new URL("http://"+sauceLabUserName+":"+sauceLabAccessKey+"@ondemand.saucelabs.com:00/wd/hub"),cap);
+
+        }
+       return driver;
+
     }
 
 

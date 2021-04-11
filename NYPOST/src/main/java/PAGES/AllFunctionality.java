@@ -1,5 +1,6 @@
 package PAGES;
 
+import com.sun.org.apache.bcel.internal.generic.SWITCH;
 import datafetch.FetchTheSteps;
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.WebDriver;
@@ -9,11 +10,14 @@ import java.io.IOException;
 
 import static javafx.beans.binding.Bindings.select;
 
-public class AllFunctionality {
+public class AllFunctionality<d, i, featureName> {
 
     LandingPage landingPage = null;
     SectionPage sectionPage = null;
     SearchPage searchPage = null;
+
+    public AllFunctionality() throws IOException, InterruptedException {
+    }
 
 
     public void clickOnSectionMenu(WebDriver driver){
@@ -32,16 +36,24 @@ public class AllFunctionality {
     }
     public void runAllTheFeatureTest(WebDriver driver) throws  InterruptedException, IOException();
     FetchTheSteps fetchTheSteps = new FetchTheSteps();
-    String [] featureSteps = fetchTheSteps.getDataFromExcelFile();
+    String[][] featureSteps = fetchTheSteps.getDataFromExcelFile();
     for(int i = 1; i < featureSteps.length; i++){
         String driver = null;
-        select(featureSteps[i],driver);
+        try {
+            select(featureSteps[i],driver);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void select(String featureNews, WebDriver driver)throws InterruptedException,IOException(d);
+    public void select(String[] featureNews, String driver)throws InterruptedException,IOException(d);
             switch(featureName){
         case "Section menu":
-            sectionMenu(driver);
+            WebDriver driver = null;
+            
+                sectionMenu(driver);
             break;
         case "search":
             searchPage(driver);
@@ -49,5 +61,8 @@ public class AllFunctionality {
         default:
             throw new InvalidArgumentException("Invalid feature");
 
+    }
+
+    private void searchPage(WebDriver driver) {
     }
 }

@@ -1,7 +1,15 @@
 package table.data;
 
-public class TestWebTableData {
+import table.ReadTableData;
 
+public class TestWebTableData extends ReadTableData {
 
+   @Test
+    public void readWebText(){
+       readDataTable();
+   }
+
+    private void readDataTable() {
+    }
 
 }

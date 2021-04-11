@@ -198,7 +198,7 @@ public class ConnectSqlDB<Student> {
                 String id = rs.getString("stID");
                 String dob = rs.getString("stDOB");
                 //System.out.format("%s, %s\n", name, id);
-                user = new User(name,id, dob);
+                user = new user(name,id, dob);
                 list.add(user);
 
             }
@@ -213,7 +213,6 @@ public class ConnectSqlDB<Student> {
     public static <User> void main(String[] args)throws IOException, SQLException, ClassNotFoundException {
         List<User> list = readUserProfileFromSqlTable();
         for(User user:list){
-            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
         }
     }
 }
