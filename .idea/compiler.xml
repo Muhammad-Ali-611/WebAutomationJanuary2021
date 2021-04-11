@@ -13,12 +13,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Amazon" target="1.8" />
-      <module name="Genarate" target="1.8" />
-      <module name="NYPOST" target="1.8" />
+      <module name="Amazon" target="1.5" />
+      <module name="Genarate" target="1.5" />
+      <module name="NYPOST" target="1.5" />
       <module name="W3School" target="1.8" />
       <module name="W3Schools" target="1.5" />
-      <module name="WebAutomationJanuary2021" target="1.8" />
+      <module name="WebAutomationJanuary2021" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
