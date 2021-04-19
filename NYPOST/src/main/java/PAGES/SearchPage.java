@@ -1,26 +1,39 @@
 package PAGES;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
+
 
 public class SearchPage {
-    @Test
-    public void search(){
-        WebDriver driver = null;
-        SearchPage searchPage = PageFactory.initElements(driver, SearchPage.class);
-        searchPage.searchIconClickNEnterNewsNSubmit();
+    @FindBy(how = How.CSS,using = "span.search-text")
+    public static WebElement searchIconWebElement;
+
+    @FindBy(how = How.CSS,using = "#search-field")
+    public static WebElement searchInputFieldWebElement;
+
+    @FindBy(how = How.CSS,using = "#search-submit")
+    public static WebElement searchSubmitButtonWebElement;
+
+    public void searchIcon(){
+        searchIconWebElement.click();
     }
 
-    public void searchIconClickNEnterNewsNSubmit() {
+    public void typeOnSearchField(String value){
+        searchInputFieldWebElement.sendKeys(value);
+    }
+    public void clickOnSubmitButton(){
+        searchSubmitButtonWebElement.click();
+    }
+    public void searchIconClickNEnterNewsNSubmit(){
+        searchIcon();
+        typeOnSearchField("covid-19");
+        clickOnSubmitButton();
+    }
+    public void clickOnSearchButton(){
+        searchSubmitButtonWebElement.click();
     }
 
-    public Object goToBusinessPage(WebDriver driver) {
-        return goToBusinessPage(driver);
-    }
 }
 
 

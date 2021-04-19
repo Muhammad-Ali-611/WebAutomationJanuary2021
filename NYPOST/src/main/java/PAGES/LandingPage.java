@@ -1,29 +1,39 @@
 package PAGES;
 
+import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class LandingPage {
 
-    @FindBy(how = How.CSS,using = "#page-nav")
-    public static  WebElement sectionNavBarWebElement;
+    @FindBy(how = How.CSS, using = "#sections > span.menu-icon > svg")
+    public static WebElement sectionNavBarWebElement;
 
-    @FindBy(how = How.CSS,using = "#page-nav")
+    @FindBy(how = How.CSS,using = "span.search-text")
     public static WebElement searchWebElement;
 
-    @FindBy(how = How.CSS,using = "#page-nav.icon-email")
-    public static WebElement  signupWebElement;
+    @FindBy(how = How.CSS,using = "#page-nav .icon-email")
+    public static WebElement signUpWebElement;
 
-    public void clickOnSectionMenu(){
-        sectionNavBarWebElement.click();
-    }
-    public void ClickOnSearch(){
+    public void clickOnSearch(){
         searchWebElement.click();
     }
-    public void signup(){
-        searchWebElement.click();
-
+    public void signUp(){
+        signUpWebElement.click();
     }
 
+    public void clickOnSignUp(){
+        signUpWebElement.click();
+    }
+
+    public void clickOnSectionMenu()throws InterruptedException{
+        try {
+            sectionNavBarWebElement.click();
+        }catch(Exception ex){
+            CommonAPI.navigateBack();
+            Thread.sleep(2000);
+            sectionNavBarWebElement.click();
+        }
+    }
 }

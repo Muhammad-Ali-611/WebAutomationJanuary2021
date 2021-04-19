@@ -3,21 +3,21 @@ package searchpage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchPage {
+public class SearchPage  {
     public static List<String> getItemList() {
 
-            List<String> list = new ArrayList<>();
-            List.add("Laptop");
-            List.add("honey");
-            List.add("books");
-            List.add("monitor");
-            List.add("algorithm books");
-            List.add("charger");
+            List<String> list = new ArrayList<String>();
+            list.add("Laptop");
+            list.add("honey");
+            list.add("books");
+            list.add("monitor");
+            list.add("algorithm books");
+            list.add("charger");
 
             return list;
         }
 
 
     }
-}
+
 

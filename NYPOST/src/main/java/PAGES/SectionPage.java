@@ -6,59 +6,59 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+
 public class SectionPage {
 
 
-    @FindBy(how = How.CSS, using = "#page-nav")
+    @FindBy(how = How.CSS,using = "#sections > span.pages.menu-icon > svg")
     public static WebElement sectionMenuWebElement;
 
-
-    @FindBy(how = How.CSS, using = ".manu-main-manu li:nth-child(3) a")
+    @FindBy(how = How.CSS, using = "#menu-main-menu li:nth-child(3) a")
     public static WebElement metroMenuWebElement;
 
+    @FindBy(how = How.CSS, using = "#menu-main-menu li:nth-child(6) a")
+    public static WebElement businessMenuWebElement;
 
-    @FindBy(how = How.CSS, using = ".manu-main-manu li:nth-child(6) a")
-    public static WebElement busineesMenuWebElement;
+    @FindBy(how = How.CSS, using = "#menu-main-menu li:nth-child(8) a")
+    public static WebElement entertainmentMenuWebElement;
 
-    public WebElement getSectionMenuWebElement() {
+    public WebElement getSectionMenuWebElement(){
+
         return sectionMenuWebElement;
     }
 
-    public WebElement getMetroMenuWebElement() {
+    public WebElement getMetroMenuWebElement(){
+
         return metroMenuWebElement;
     }
+    public WebElement getBusinessMenuWebElement(){
 
-    public WebElement getBusineesMenuWebElement() {
-        return busineesMenuWebElement;
+        return businessMenuWebElement;
     }
+    public WebElement getEntertainmentMenuWebElement(){
 
-    public WebElement getEntertainmentMenuWebElement() {
-        return getEntertainmentMenuWebElement();
+        return entertainmentMenuWebElement;
     }
-
-    public void clickOnSectionMenuTab() {
+    public void clickOnSectionMenuTab(){
         getSectionMenuWebElement().click();
     }
-
-    public MetroPage goToMetroPage(WebDriver driver) {
+    public MetroPage goToMetroPage(WebDriver driver){
         getMetroMenuWebElement().click();
         return new MetroPage(driver);
     }
-
-    public BusinessPage goToBusinessPage(WebDriver driver) throws InterruptedException {
+    public BusinessPage goToBusinessPage(WebDriver driver)throws InterruptedException{
         try {
-            getBusineesMenuWebElement().click();
-        } catch (Exception ex) {
+            getBusinessMenuWebElement().click();
+        }catch (Exception ex){
             CommonAPI.navigateBack();
             Thread.sleep(1000);
-            getBusineesMenuWebElement();
+            getBusinessMenuWebElement().click();
         }
         return new BusinessPage(driver);
-
-        public EntertainmentPage goToEntertainmentPage (WebDriver driver){
-            getEntertainmentMenuWebElement().click();
-            return new EntertainmentPage(driver);
-        }
+    }
+    public EntertainmentPage goToEntertainmentPage(WebDriver driver){
+        getEntertainmentMenuWebElement().click();
+        return new EntertainmentPage(driver);
     }
 }
 

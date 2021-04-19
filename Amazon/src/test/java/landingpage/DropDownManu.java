@@ -18,7 +18,7 @@ public class DropDownManu extends CommonAPI {
 
         }
 
-    private List<String> getListOfText(String s) {
+    public List<String> getListOfText(String s) {
         return getListOfText("s");
     }
 }
