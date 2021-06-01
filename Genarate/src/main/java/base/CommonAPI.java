@@ -23,8 +23,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class CommonAPI {
-    private static WebDriver driver2;
-    public WebDriver driver1 = null;
     public String browserStackUserName = "Muhammad Ali";
     public String browserStackAccessKey = "StrCXDyLU9h2gRPppqKU";
     public String sauceLabUserName = "";
@@ -32,7 +30,7 @@ public class CommonAPI {
 
     public static WebDriver driver = null;
 
-    @Parameters({"useCloudEnv","envName","os","os_version","browserName","browserVersion","url"})
+    @Parameters({"useCloudEnv","envName","os","os_version", "browserName","browserVersion","url"})
     @BeforeMethod
     public void setUp(String useCloudEnv, String envName, String os, String os_version, String browserName,
                       String browserVersion,String url) throws MalformedURLException {

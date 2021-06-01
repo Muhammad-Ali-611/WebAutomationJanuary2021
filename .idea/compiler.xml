@@ -10,10 +10,12 @@
         <module name="W3Schools" />
         <module name="Amazon" />
         <module name="NYPOST" />
+        <module name="ExtentReport" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Amazon" target="1.8" />
+      <module name="ExtentReport" target="1.8" />
       <module name="Genarate" target="1.8" />
       <module name="NYPOST" target="1.8" />
       <module name="W3Schools" target="1.8" />

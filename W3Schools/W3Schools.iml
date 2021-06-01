@@ -13,8 +13,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Genarate" />
     <orderEntry type="library" name="Maven: org.mongodb:mongo-java-driver:3.12.8" level="project" />
-    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.23" level="project" />
-    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.11.4" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-remote-driver:4.0.0-beta-1" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.58.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-codec-http:4.1.58.Final" level="project" />
@@ -78,6 +76,8 @@
     <orderEntry type="library" name="Maven: org.testng:testng:7.4.0" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.78" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:jquery:3.5.1" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.24" level="project" />
+    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.11.4" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:4.0.0-beta-1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chromium-driver:4.0.0-beta-1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.poi:poi:5.0.0" level="project" />

@@ -18,7 +18,6 @@ public class ConnectToExcelFile {
     public static Cell cell = null;
     public static FileOutputStream fio = null;
     public static int numberOfRows, numberOfCol, rowNum;
-    private Object HSSFWorkbook;
 
     public String[][] fileReader1(String path,int sheetIndex) throws IOException {
         String[][] data = {};
@@ -62,12 +61,7 @@ public class ConnectToExcelFile {
         return data;
     }
 
-    private String getCellValue(HSSFCell cell) {
-        return getCellValue((HSSFCell) HSSFWorkbook);
-    }
-    }
-
-    /*public static String getCellValue(HSSFCell cell) {
+    public static String getCellValue(HSSFCell cell) {
         Object value = null;
 
         int dataType = cell.getCellType();
@@ -84,9 +78,9 @@ public class ConnectToExcelFile {
         }
         return value.toString();
 
-    }*/
+    }
 
-    /*public void writeBack(String value) throws IOException {
+    public void writeBack(String value) throws IOException {
         wb = new HSSFWorkbook();
         sheet = wb.createSheet();
         Row row = sheet.createRow(rowNum);
@@ -101,4 +95,4 @@ public class ConnectToExcelFile {
         fio.close();
         wb.close();
     }
-}*/
+}

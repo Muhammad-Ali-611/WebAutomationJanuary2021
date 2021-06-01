@@ -13,6 +13,9 @@ public class Search extends CommonAPI {
         for (String item:itemList) {
             typeONCss("#twotabsearchtextbox", "laptop");
             Thread.sleep(2000);
-            clearInputField("#twotabsearchtextbox");        }
+            clearInputField("#twotabsearchtextbox");
+        }
     }
-}
+
+    }
+
